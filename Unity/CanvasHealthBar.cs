@@ -1,8 +1,6 @@
-﻿using System;
-using Cameras;
+﻿using Cameras;
 using UnityEngine;
 using UnityExtensions;
-using Object = UnityEngine.Object;
 using Vector3 = System.Numerics.Vector3;
 
 namespace HealthBars.Unity
