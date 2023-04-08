@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace HealthBars
+namespace HealthBars.Unity
 {
-    public class CanvasHealthBarFactory : IHealthBarFactory
+    public class CanvasHealthBarFactory : ICanvasHealthBarFactory
     {
         private readonly Dictionary<string, CanvasHealthBar> _healthBars = new();
 
@@ -12,7 +12,7 @@ namespace HealthBars
             _healthBars.Add(healthBarHash, healthBar);
         }
 
-        public IHealthBar CreatHealthBar(string hash)
+        public ICanvasHealthBar CreatHealthBar(string hash)
         {
             return Object.Instantiate(_healthBars[hash]);
         }

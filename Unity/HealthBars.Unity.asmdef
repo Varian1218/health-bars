@@ -1,0 +1,18 @@
+{
+    "name": "HealthBars.Unity",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a3550bd9cccd74447ab9aec884d8e26e",
+        "GUID:0de1ad77060244c49b43b58bb2d3874c",
+        "GUID:6f2c43062e898414d8bcbdb93b73c5e0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,7 +1,7 @@
 ﻿using SystemVector3 = System.Numerics.Vector3;
 using UnityVector3 = UnityEngine.Vector3;
 
-namespace HealthBars
+namespace HealthBars.Unity
 {
     internal static class UnityUtils
     {

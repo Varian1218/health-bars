@@ -1,5 +1,4 @@
 using UnityEngine;
-using Vector3 = System.Numerics.Vector3;
 
 namespace HealthBars
 {
@@ -11,11 +10,6 @@ namespace HealthBars
         {
             get => healthBar.Value;
             set => healthBar.Value = value;
-        }
-
-        public Vector3 Position
-        {
-            set => healthBar.Position = value;
         }
 
         public float Value

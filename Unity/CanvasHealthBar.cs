@@ -1,15 +1,15 @@
 ﻿using System;
 using Cameras;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityExtensions;
+using Object = UnityEngine.Object;
 using Vector3 = System.Numerics.Vector3;
 
-namespace HealthBars
+namespace HealthBars.Unity
 {
-    public class CanvasHealthBar : MonoBehaviour, IHealthBar
+    public class CanvasHealthBar : MonoBehaviour, ICanvasHealthBar
     {
-        [SerializeField] private UnityEvent<float> setMaxValue;
-        [SerializeField] private UnityEvent<float> setValue;
+        [SerializeField] private ObjectReference<IHealthBar> healthBar;
         private ICamera _camera;
         private Vector3 _position;
 
@@ -22,11 +22,7 @@ namespace HealthBars
             }
         }
 
-        public float MaxValue
-        {
-            get => throw new NotImplementedException();
-            set => setMaxValue.Invoke(value);
-        }
+        public IHealthBar HealthBar => healthBar.Value;
 
         public Vector3 Position
         {
@@ -35,17 +31,6 @@ namespace HealthBars
                 _position = value;
                 UpdatePosition();
             }
-        }
-
-        public float Value
-        {
-            get => throw new NotImplementedException();
-            set => setValue.Invoke(value);
-        }
-
-        public bool Visible
-        {
-            set => gameObject.SetActive(value);
         }
 
         private void UpdatePosition()

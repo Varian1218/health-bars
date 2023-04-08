@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HealthBars
+namespace HealthBars.Unity
 {
     [CreateAssetMenu(
         menuName = "Health Bars/Canvas Health Bar Factory",

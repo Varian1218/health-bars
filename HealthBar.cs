@@ -1,5 +1,4 @@
 using UnityEngine;
-using Vector3 = System.Numerics.Vector3;
 
 namespace HealthBars
 {
@@ -17,11 +16,6 @@ namespace HealthBars
                 _maxValue = value;
                 UpdateHealthBar();
             }
-        }
-
-        public Vector3 Position
-        {
-            set => transform.position = UnityUtils.Convert(value);
         }
 
         public float Value

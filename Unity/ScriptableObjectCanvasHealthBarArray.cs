@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace HealthBars
+namespace HealthBars.Unity
 {
     [CreateAssetMenu(menuName = "Health Bars/Canvas Health Bar Array", fileName = "Canvas Health Bar Array", order = 1)]
     public class ScriptableObjectCanvasHealthBarArray : ScriptableObject, IEnumerable<CanvasHealthBar>
