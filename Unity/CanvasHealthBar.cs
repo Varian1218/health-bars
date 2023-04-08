@@ -1,4 +1,5 @@
 ﻿using Cameras;
+using Transforms;
 using UnityEngine;
 using UnityExtensions;
 using Vector3 = System.Numerics.Vector3;
@@ -29,6 +30,11 @@ namespace HealthBars.Unity
                 _position = value;
                 UpdatePosition();
             }
+        }
+
+        public ITransform Parent
+        {
+            set => transform.SetParent(value.GetComponent<Transform>(), false);
         }
 
         private void UpdatePosition()

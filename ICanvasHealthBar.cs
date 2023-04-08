@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using Cameras;
+using Transforms;
 
 namespace HealthBars
 {
@@ -8,5 +9,6 @@ namespace HealthBars
         ICamera Camera { set; }
         IHealthBar HealthBar { get; }
         Vector3 Position { set; }
+        ITransform Parent { set; }
     }
 }
