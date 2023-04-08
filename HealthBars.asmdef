@@ -1,3 +1,16 @@
 {
-	"name": "HealthBars"
+    "name": "HealthBars",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a3550bd9cccd74447ab9aec884d8e26e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
