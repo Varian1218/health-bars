@@ -7,16 +7,16 @@ namespace HealthBars.Unity
         fileName = "Canvas Health Bar Factory",
         order = 1
     )]
-    public class ScriptableObjectCanvasHealthBarFactory : ScriptableObject, IHealthBarFactory
+    public class ScriptableObjectCanvasHealthBarFactory : ScriptableObject, ICanvasHealthBarFactory
     {
-        private IHealthBarFactory _impl;
+        private ICanvasHealthBarFactory _impl;
 
-        public IHealthBarFactory Impl
+        public ICanvasHealthBarFactory Impl
         {
             set => _impl = value;
         }
 
-        public IHealthBar CreatHealthBar(string hash)
+        public ICanvasHealthBar CreatHealthBar(string hash)
         {
             return _impl.CreatHealthBar(hash);
         }
