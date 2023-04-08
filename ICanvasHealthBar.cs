@@ -1,4 +1,5 @@
-﻿using Cameras;
+﻿using System.Numerics;
+using Cameras;
 
 namespace HealthBars
 {
@@ -6,5 +7,6 @@ namespace HealthBars
     {
         ICamera Camera { set; }
         IHealthBar HealthBar { get; }
+        Vector3 Position { set; }
     }
 }
