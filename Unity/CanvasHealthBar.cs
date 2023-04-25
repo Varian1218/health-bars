@@ -1,7 +1,7 @@
 ﻿using Cameras;
 using Transforms;
 using UnityEngine;
-using UnityExtensions;
+using UnityBoosts;
 using Vector3 = System.Numerics.Vector3;
 
 namespace HealthBars.Unity
