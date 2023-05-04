@@ -1,6 +1,8 @@
-﻿using UnityEngine.UI;
+﻿using System.Numerics;
+using HealthBars.Unity;
+using UnityEngine.UI;
 
-namespace HealthBars.Unity
+namespace HealthBars
 {
     public class SliderHealthBar : Slider, IHealthBar
     {
@@ -8,6 +10,11 @@ namespace HealthBars.Unity
         {
             get => maxValue;
             set => maxValue = value;
+        }
+
+        public Vector3 Position
+        {
+            set => transform.position = UnityUtils.Convert(value);
         }
 
         public float Value
