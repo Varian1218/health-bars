@@ -1,13 +1,12 @@
-using System.Numerics;
 using Transforms;
 
 namespace HealthBars
 {
-    public interface IHealthBar : IComponentGetHandler
+    public interface IHealthBar
     {
-        float MaxValue { get; set; }
-        Vector3 Position { set; }
-        float Value { get; set; }
+        int MaxValue { set; }
+        ITransform Transform { get; }
+        int Value { set; }
         bool Visible { set; }
     }
 }

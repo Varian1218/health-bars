@@ -1,31 +1,40 @@
-﻿using System.Numerics;
-using HealthBars.Unity;
+﻿using Transforms;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityUtils = HealthBars.Unity.UnityUtils;
+using Vector3 = System.Numerics.Vector3;
 
 namespace HealthBars
 {
-    public class SliderHealthBar : Slider, IHealthBar
+    public class SliderHealthBar : Slider, IHealthBar, ISerializationCallbackReceiver
     {
-        public float MaxValue
+        public int MaxValue
         {
-            get => maxValue;
             set => maxValue = value;
         }
 
-        public Vector3 Position
-        {
-            set => transform.position = UnityUtils.Convert(value);
-        }
+        public ITransform Transform { get; private set; }
 
-        public float Value
+        public int Value
         {
-            get => value;
             set => this.value = value;
         }
 
         public bool Visible
         {
             set => gameObject.SetActive(value);
+        }
+
+        public void OnBeforeSerialize()
+        {
+        }
+
+        public void OnAfterDeserialize()
+        {
+            Transform = new UnityTransform
+            {
+                Impl = transform
+            };
         }
     }
 }

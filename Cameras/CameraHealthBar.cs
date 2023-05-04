@@ -1,5 +1,6 @@
 using System.Numerics;
 using Cameras;
+using Transforms;
 
 namespace HealthBars.Cameras
 {
@@ -8,25 +9,15 @@ namespace HealthBars.Cameras
         public ICamera Camera { get; set; }
         public IHealthBar Impl { get; set; }
 
-        public T GetComponent<T>()
+        public int MaxValue
         {
-            return Impl.GetComponent<T>();
-        }
-
-        public float MaxValue
-        {
-            get => Impl.MaxValue;
             set => Impl.MaxValue = value;
         }
 
-        public Vector3 Position
-        {
-            set => Impl.Position = Camera.WorldToScreenPoint(value);
-        }
+        public ITransform Transform { get; }
 
-        public float Value
+        public int Value
         {
-            get => Impl.Value;
             set => Impl.Value = value;
         }
 
