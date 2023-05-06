@@ -3,17 +3,17 @@ using Factories;
 
 namespace HealthBars.Cameras.Factories
 {
-    public class CameraHealthBarFactory<T> : IParamsFactory<IHealthBar, T>
+    public class CameraHealthBarFactory<TMaterial> : IFactory<TMaterial, IHealthBar>
     {
-        public IParamsFactory<IHealthBar, T> Impl { get; set; }
+        public IFactory<TMaterial, IHealthBar> Impl { get; set; }
         public ICamera Camera { get; set; }
 
-        public IHealthBar Create(T parameters)
+        public IHealthBar Create(TMaterial material)
         {
             return new CameraHealthBar
             {
                 Camera = Camera,
-                Impl = Impl.Create(parameters)
+                Impl = Impl.Create(material)
             };
         }
     }
